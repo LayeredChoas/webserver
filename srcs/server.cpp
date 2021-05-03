@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   server.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayennoui <ayennoui@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amoujane <amoujane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 16:45:17 by ayennoui          #+#    #+#             */
-/*   Updated: 2021/04/29 16:48:31 by ayennoui         ###   ########.fr       */
+/*   Updated: 2021/04/30 15:34:28 by amoujane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -519,9 +519,9 @@ std::string server::put_method()
 	if (fd > 0)
 		pending_write(fd, qu_string);
 	close(fd);
-	header_var.push("Content-Length", "6");
+	header_var.push("Content-Length", "7");
 	header_var.push("Transfer-Encoding", "");
-	response = header_var.header_msg() + "\r\n" + "Sucess";
+	response = header_var.header_msg() + "\r\n" + "Success";
 	header_var.reset_header();
 	return (response);
 }

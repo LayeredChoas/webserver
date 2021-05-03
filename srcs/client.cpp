@@ -6,7 +6,7 @@
 /*   By: ayennoui <ayennoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 13:45:45 by ayennoui          #+#    #+#             */
-/*   Updated: 2021/04/29 16:53:51 by ayennoui         ###   ########.fr       */
+/*   Updated: 2021/05/03 14:03:33 by ayennoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -203,8 +203,6 @@ int client::request_done()
 			{
 				client_body.resize(value);
 				client_request = client_request.substr(0, client_request.find("\r\n\r\n"));
-				// if (client_body.find_last_of("\r\n") == client_body.size() - 2)
-				// 	client_body = client_body.substr(0, client_body.size() - 2);
 				return (1);
 			}
 		}

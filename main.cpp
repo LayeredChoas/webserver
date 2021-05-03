@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayennoui <ayennoui@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amoujane <amoujane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 16:22:17 by ayennoui          #+#    #+#             */
-/*   Updated: 2021/04/29 13:59:27 by ayennoui         ###   ########.fr       */
+/*   Updated: 2021/05/01 16:15:40 by amoujane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -208,7 +208,8 @@ void run_webserver(std::vector<server> g_ret, std::multimap<std::string, server>
 					{
 						FD_CLR(client_fd, &activewritefds);
 						FD_SET(client_fd, &activefds);
-						c->client_finished();
+						if (wr_value != 0)
+							c->client_finished();
 						if (c->client_closed() || c->get_response().find("Connection: close") != std::string::npos)
 						{
 							ci = running_c[c_u].erase(ci);
