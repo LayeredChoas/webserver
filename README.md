@@ -1,6 +1,7 @@
 # webserv
 
 42 project, recoding our own web server in C++. A program capable of running an HTTP server, handling requests, and parsing configuration files.
+webserv is a HTTP/1.1 server written in C++98. It must be conditionnal compliant with RFC 7230 to 7235.
 
 ### HTTP 1.1 (standard to follow) :
 
